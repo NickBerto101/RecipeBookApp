@@ -51,3 +51,59 @@ h1{
     padding: 10px;
     min-width: 200px;
 }
+
+.recipe-item p{
+    margin: 0;
+    padding: 10px;
+    color: #777;
+}
+
+.recipe-item a{
+    padding: 10px;
+    background-color: #0c2461;
+    color: white;
+    min-width: 150px;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-item a:hover{
+    background-color: #1e3799
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        max-width: 90%;
+    }
+    .recipe-item {
+        flex-direction: column;
+    }
+
+    .recipe-item img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .recipe-item h2{
+        font-size: 20px;
+        padding: 0;
+        margin-bottom: 10px;
+        text-align: start;
+    }
+    
+    .recipe-item p{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .recipe-item a {
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
