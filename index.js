@@ -8,6 +8,7 @@ function displayRecipes(recipes){
         const recipeImageEl = document.createElement('img');
         const recipeTitleEl = document.createElement('h2');
         const recipeIngEl = document.createElement('p');
+        const recipeLinkEl = document.createElement('a');
 
         recipeIngEl.innerHTML = `
             <strong>Ingredients:</strong> ${recipe.extendedIngredients.
@@ -16,11 +17,14 @@ function displayRecipes(recipes){
         recipeItemEl.classList.add('recipe-item');
         recipeImageEl.src = recipe.image;
         recipeImageEl.alt = "recipe";
+        recipeLinkEl.href = recipe.sourceUrl;
+        recipeLinkEl.innerText = "View Recipe"
 
         recipeItemEl.appendChild(recipeImageEl);
         recipeItemEl.appendChild(recipeTitleEl);
         recipeItemEl.appendChild(recipeIngEl);
         recipeListEl.appendChild(recipeItemEl);
+        recipeItemEl.appendChild(recipeLinkEl);
     });
 }
 
